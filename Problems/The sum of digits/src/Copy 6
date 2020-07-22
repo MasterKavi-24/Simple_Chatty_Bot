@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int totalSum = 0;
+
+        String line = scanner.next();
+
+        // Split the string into separate values
+        String[] values = line.split("");
+
+        // Calculate the sum of the values
+        for (String value : values) {
+            // Add the value to the total sum
+            totalSum += Integer.parseInt(value);
+        }
+
+        System.out.println(totalSum);
+    }
+}

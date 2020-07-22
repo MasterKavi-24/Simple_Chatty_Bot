@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int previous = scanner.nextInt();
+        int current;
+        int currentTrend; // 1-growing; 2-decreasing; 3-unchanged
+        int oldTrend = 0;
+        boolean outcome = true;
+        boolean firstRun = true;
+
+        do {
+            current = scanner.nextInt();
+            if (current == 0) {
+                break;
+            }
+            if (current > previous) {
+                currentTrend = 1;
+            } else if (current < previous) {
+                currentTrend = 2;
+            } else {
+                currentTrend = 3;
+            }
+            if (firstRun) {
+                firstRun = false;
+                oldTrend = currentTrend;
+                continue;
+            }
+            if (currentTrend != 3 && oldTrend != 3 && currentTrend != oldTrend) {
+                outcome = false;
+            }
+            if (currentTrend != 3) {
+                oldTrend = currentTrend;
+            }
+            previous = current;
+        } while (current != 0);
+        System.out.println(outcome);
+    }
+}

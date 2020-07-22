@@ -1,0 +1,32 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String... args) {
+        final Scanner read = new Scanner(System.in);
+        boolean ordered = true,
+                ascending = true,
+                first = true;
+        int previous = 0, next;
+        do {
+            if (first) { // find out the order
+                first = false;
+                previous = read.nextInt();
+                do {
+                    next = read.nextInt();
+                } while (previous == next);
+                ascending = previous < next;
+                continue;
+            }
+            next = read.hasNext() ? read.nextInt() : 0;
+            if (next == 0) {
+                break;
+            }
+            ordered = ordered
+                    && (
+                    ascending && previous <= next
+                            || !ascending && previous >= next
+            );
+            previous = next;
+        } while (true);
+        System.out.println(ordered);
+    }
+}

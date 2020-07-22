@@ -1,0 +1,25 @@
+import java.util.Scanner;
+import java.util.regex.*;
+import java.util.List;
+import java.util.ArrayList;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Pattern pattern = Pattern.compile("\\d+");
+        String strHeight = sc.nextLine();
+        Matcher matcher = pattern.matcher(strHeight);
+
+        List<Integer> height = new ArrayList<>();
+
+        int start = 0;
+        while (matcher.find(start)) {
+            String value = strHeight.substring(matcher.start(), matcher.end());
+            height.add(Integer.parseInt(value));
+            start = matcher.end();
+        }
+
+        System.out.println(height.get(0).equals(height.get(1)) || height.get(0) < height.get(1) ?
+                height.get(2) >= height.get(1) : height.get(2) <= height.get(1));
+    }
+}

@@ -1,0 +1,39 @@
+//Not happy about this one, but still did it.
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        boolean answer = true;
+        int input1 = scanner.nextInt();
+        int input2 = scanner.nextInt();
+        while (input1 == input2) {
+            input1 = input2;
+            input2 = scanner.nextInt();
+        }
+        if (input1 > input2) {
+            while (scanner.hasNext() && input2 != 0) {
+                input1 = input2;
+                input2 = scanner.nextInt();
+                if (input1 >= input2 || input2 == 0) {
+                    continue;
+                } else {
+                    answer = false;
+                    break;
+                }
+            }
+        }
+        if (input1 < input2) {
+            while (scanner.hasNext() && input2 != 0) {
+                input1 = input2;
+                input2 = scanner.nextInt();
+                if (input1 <= input2 || input2 == 0) {
+                    continue;
+                } else {
+                    answer = false;
+                    break;
+                }
+            }
+        }
+        System.out.print(answer);
+    }
+}

@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int oneBoy = scanner.nextInt();
+        int twoBoy = scanner.nextInt();
+        int treeBoy = scanner.nextInt();
+
+        if (oneBoy == twoBoy
+                || twoBoy == treeBoy) {
+            System.out.print(true);
+        } else if (oneBoy > twoBoy
+                && twoBoy > treeBoy) {
+            System.out.print(true);
+        } else {
+            System.out.print(oneBoy < twoBoy
+                    && twoBoy < treeBoy);
+        }
+    }
+}

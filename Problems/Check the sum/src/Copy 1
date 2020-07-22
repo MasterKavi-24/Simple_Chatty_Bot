@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // put your code here
+        List<Integer> list = new ArrayList<>();
+        while (scanner.hasNext()) {
+            list.add(scanner.nextInt());
+        }
+        boolean result = false;
+        final int value = 20;
+        for (int i = 0; i < list.size(); i++) {
+            for (int y = i + 1; y < list.size(); y++) {
+                if (list.get(i) + list.get(y) == value) {
+                    result = true;
+                    break;
+                }
+            }
+        }
+        System.out.println(result);
+    }
+}

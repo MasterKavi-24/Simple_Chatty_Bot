@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // put your code here
+
+        int[] boys = new int[3];
+
+        for (int i = 0; i < 3; i++) {
+            boys[i] = scanner.nextInt();
+        }
+
+        System.out.println(boys[2] <= boys[1] && boys[1] <= boys[0] ||
+                boys[0] <= boys[1] && boys[1] <= boys[2]);
+
+    }
+}

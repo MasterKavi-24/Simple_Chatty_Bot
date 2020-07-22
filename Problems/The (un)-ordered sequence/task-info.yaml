@@ -1,0 +1,48 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    class Main {
+        public static void main(String[] args) {
+            // put your code here
+        }
+    }
+  learner_created: false
+- name: src/Copy 1
+  visible: true
+  learner_created: true
+- name: src/Copy 2
+  visible: true
+  learner_created: true
+- name: src/Copy 3
+  visible: true
+  learner_created: true
+- name: src/Copy 4
+  visible: true
+  learner_created: true
+- name: src/Copy 5
+  visible: true
+  learner_created: true
+- name: src/Copy 6
+  visible: true
+  learner_created: true
+- name: src/Copy 7
+  visible: true
+  learner_created: true
+- name: src/Copy 8
+  visible: true
+  learner_created: true
+- name: src/Copy 9
+  visible: true
+  learner_created: true
+- name: src/Copy 10
+  visible: true
+  learner_created: true
+feedback_link: https://hyperskill.org/learn/step/2734
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/2734">JetBrains
+    Academy</a></html>
+  time: Thu, 09 Jul 2020 12:56:39 UTC
+record: -1

@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // put your code here
+        var first = 0;
+        var second = 0;
+        first += scanner.nextInt() * 3600;
+        first += scanner.nextInt() * 60;
+        first += scanner.nextInt();
+
+        second += scanner.nextInt() * 3600;
+        second += scanner.nextInt() * 60;
+        second += scanner.nextInt();
+
+        System.out.println(second - first);
+    }
+}

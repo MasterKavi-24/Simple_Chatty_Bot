@@ -1,0 +1,16 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int q1X = sc.nextInt();
+        int q1Y = sc.nextInt();
+        int q2X = sc.nextInt();
+        int q2Y = sc.nextInt();
+        int isYSame = Math.abs(q2Y - q1Y);
+        int isXSame = Math.abs(q2X - q1X);
+        float isGradientOne = Math.abs((float) (q2Y - q1Y) / (q2X - q1X));
+        String isHit = isYSame == 0 || isXSame == 0 || isGradientOne == 1 ? "YES" : "NO";
+        System.out.println(isHit);
+
+    }
+}

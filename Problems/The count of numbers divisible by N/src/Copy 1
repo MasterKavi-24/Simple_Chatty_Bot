@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        //inputs the scanner
+        Scanner scanner = new Scanner(System.in);
+
+        //initialize the variables
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        int n = scanner.nextInt();
+
+        //calculates and prints out the count of numbers
+        System.out.println((b - a) / n + 1);
+    }
+}

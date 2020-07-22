@@ -1,0 +1,25 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        int newVal = 0;
+        int prevVal = 0;
+        boolean asc = true;
+        boolean desc = true;
+        Scanner scanner = new Scanner(System.in);
+        while ((newVal = scanner.nextInt()) != 0) {
+            if (prevVal == 0) {
+                prevVal = newVal;
+            }
+            if (prevVal > newVal) {
+                prevVal = newVal;
+                asc = false;
+            } else if (prevVal < newVal) {
+                prevVal = newVal;
+                desc = false;
+            } else if (prevVal == newVal) {
+                prevVal = newVal;
+            }
+        }
+        System.out.println(asc || desc);
+    }
+}

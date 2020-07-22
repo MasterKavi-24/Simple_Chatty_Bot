@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int h = scanner.nextInt();
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        int dist_in_one_day = a-b;
+        int no_of_days = h/dist_in_one_day;
+        System.out.println(no_of_days);
+    }
+}

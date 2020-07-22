@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        // put your code here
+        int value = new Scanner(System.in).nextInt();
+        boolean inRange = -15 < value && value <= 12 ||
+                14 < value && value < 17 ||
+                19 <= value;
+        System.out.println(inRange ? "True" : "False");
+    }
+}

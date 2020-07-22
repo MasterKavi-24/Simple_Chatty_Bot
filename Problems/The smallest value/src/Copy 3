@@ -1,0 +1,13 @@
+class Main {
+    public static void main(String[] args) {
+        // put your code here
+        long m = Long.parseLong(new java.util.Scanner(System.in).next());
+        int n = 0;
+        long factorial = 1;
+        do {
+            n++;
+        }
+        while ((factorial *= n) <= m);
+        System.out.println(n);
+    }
+}

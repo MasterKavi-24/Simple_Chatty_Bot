@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static boolean isComposite(long number) {
+        // write your code here
+        boolean isComposite = false;
+
+        for (long f = 1; f <= number; f++) {
+
+            if (f != 1 && f != number && number % f == 0) {
+
+                isComposite = true;
+                break;
+            }
+        }
+        return isComposite;
+    }
+
+    /* Do not change code below */
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        final long number = scanner.nextLong();
+        System.out.println(isComposite(number));
+    }
+}

@@ -1,0 +1,24 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        // put your code here
+        Scanner sc = new Scanner(System.in);
+        int numOfParts = sc.nextInt();
+        int perfect = 0;
+        int larger = 0;
+        int smaller = 0;
+
+        for (int i = 0; i < numOfParts; i++) {
+            int element = sc.nextInt();
+
+            if (element == 0) {
+                perfect++;
+            } else if (element == -1) {
+                smaller++;
+            } else {
+                larger++;
+            }
+        }
+        System.out.println(perfect + " " + larger + " " + smaller);
+    }
+}

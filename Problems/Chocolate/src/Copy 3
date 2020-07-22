@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        //initiates the user inputs
+        int length = scanner.nextInt();
+        int height = scanner.nextInt();
+        int wanted = scanner.nextInt();
+
+        //checks if the chocolate bar can be divided into a rectangle and prints out the answer
+        if (wanted <= length * height) {
+            if (wanted % length == 0 || wanted % height == 0) {
+                System.out.println("YES");
+            } else {
+                System.out.println("NO");
+            }
+        } else {
+            System.out.println("NO");
+        }
+    }
+}

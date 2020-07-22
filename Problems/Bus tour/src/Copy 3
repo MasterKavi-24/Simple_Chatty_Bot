@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        // write your code here
+        Scanner sc = new Scanner(System.in);
+        int busHeight = sc.nextInt();
+        int bridgeNum = 0;
+        boolean crashed = false;
+        int numOfBridges = sc.nextInt();
+        int currentBridge = sc.nextInt();
+        for (int i = 1; i < numOfBridges; i++) {
+
+            if (busHeight >=  currentBridge) {
+                crashed = true;
+                bridgeNum = i;
+                break;
+            }
+
+            if (busHeight < currentBridge) {
+                currentBridge = sc.nextInt();
+            }
+        }
+
+        System.out.println(crashed ? "Will crash on bridge " + bridgeNum : "Will not crash");
+    }
+}

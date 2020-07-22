@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+class Main {
+    private static final Scanner INPUT = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int n = INPUT.nextInt();
+        int result = 0;
+        while (n > 0) {
+            result += n % 10;
+            n /= 10;
+            if (n > 0) {
+                result *= 10;
+            }
+        }
+        System.out.println(result);
+    }
+}

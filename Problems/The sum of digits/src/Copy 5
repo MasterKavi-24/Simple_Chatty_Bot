@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // put your code here
+        String input = scanner.nextLine();
+        int firstDigit = Character.getNumericValue(input.charAt(0));
+        int secondDigit = Character.getNumericValue(input.charAt(1));
+        int thirdDigit = Character.getNumericValue(input.charAt(2));
+        System.out.println(firstDigit + secondDigit + thirdDigit);
+    }
+}

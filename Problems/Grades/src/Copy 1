@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int numberOfA = 0;
+        int numberOfB = 0;
+        int numberOfC = 0;
+        int numberOfD = 0;
+
+        for (int i = 0; i < n; i++) {
+            int number = scanner.nextInt();
+            if (number == 5) {
+                numberOfA++;
+            } else if (number == 4) {
+                numberOfB++;
+            } else if (number == 3) {
+                numberOfC++;
+            } else if (number == 2) {
+                numberOfD++;
+            }
+        }
+
+        System.out.println(numberOfD + " " + numberOfC + " " + numberOfB + " " + numberOfA);
+
+    }
+}

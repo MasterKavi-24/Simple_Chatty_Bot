@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+class Main {
+    private static final Scanner IN = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int busHeight = IN.nextInt();
+        int bridges = IN.nextInt();
+        boolean ok = true;
+
+        for (int i = 0; i < bridges; i++) {
+            if (IN.nextInt() <= busHeight) {
+                ok = false;
+                System.out.println("Will crash on bridge " + (i + 1));
+                break;
+            }
+        }
+        if (ok) {
+            System.out.println("Will not crash");
+        }
+    }
+}

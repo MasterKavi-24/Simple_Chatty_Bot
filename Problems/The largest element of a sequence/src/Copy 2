@@ -1,0 +1,16 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        int max = 0;
+        int newElement;
+
+        Scanner scan = new Scanner(System.in);
+
+        do {
+            newElement = scan.nextInt();
+            max = Math.max(max, newElement);
+        } while (max != 0 && scan.hasNextLine());
+
+        System.out.println(max);
+    }
+}

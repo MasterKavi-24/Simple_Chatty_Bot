@@ -1,0 +1,17 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int sum = 0;
+        int barrier = 1000;
+        do{
+            int a = scanner.nextInt();
+            sum += a;
+            if(a == 0){
+                break;
+            }
+        }while (sum < barrier);
+        System.out.println(sum>barrier-1? sum - barrier : sum);
+        // put your code here
+    }
+}

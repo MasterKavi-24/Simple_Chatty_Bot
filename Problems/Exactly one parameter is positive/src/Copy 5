@@ -1,0 +1,34 @@
+import java.util.Scanner;
+import java.util.List;
+import java.util.ArrayList;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // put your code here
+        List<Integer> input = new ArrayList<>();
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+        int num3 = scanner.nextInt();
+
+        input.add(num1);
+        input.add(num2);
+        input.add(num3);
+
+        boolean onlyOnePositive = false;
+
+        int onePositive = 0;
+
+        for (Integer value : input) {
+            if (value > 0) {
+                onePositive++;
+            }
+        }
+
+        if (onePositive == 1) {
+            onlyOnePositive = true;
+        }
+
+        System.out.println(onlyOnePositive);
+    }
+}

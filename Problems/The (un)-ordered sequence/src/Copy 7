@@ -1,0 +1,31 @@
+import java.util.*;
+class Main {
+    private static final Scanner IN = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int n;
+        int lastNumber = 0;
+        int order = 0;
+        do {
+            n = IN.nextInt();
+            if (n != 0 && order != 0) {
+                if (order > 0) {
+                    if (lastNumber > n) {
+                        break;
+                    }
+                } else {
+                    if (lastNumber < n) {
+                        break;
+                    }
+                }
+                lastNumber = n;
+            } else {
+                if (lastNumber != 0) {
+                    order = lastNumber > n ? -1 : 1;
+                }
+                lastNumber = n;
+            }
+        } while (n != 0);
+        System.out.println(n == 0 ? "true" : "false");
+    }
+}

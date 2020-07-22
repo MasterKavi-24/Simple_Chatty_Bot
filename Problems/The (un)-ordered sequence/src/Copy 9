@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        // put your code here
+        Scanner scanner = new Scanner(System.in);
+        int input = scanner.nextInt();
+        int previousInput = input;
+
+        // sequences are assumed to be in order
+        boolean isDescending = true;
+        boolean isAscending = true;
+
+        while (input != 0) {
+            input = scanner.nextInt();
+
+            if (input == 0) { // loop exits if the input equals 0
+                break;
+            }
+
+            // checks if the sequence breaks the ascending order
+            if (!(input >= previousInput)) {
+                isAscending = false;
+            }
+
+            // checks if the sequence breaks the descending order
+            if (!(input <= previousInput)) {
+                isDescending = false;
+            }
+
+            previousInput = input;
+        }
+
+        if (isAscending) {
+            System.out.println(isAscending);
+        } else if (isDescending) {
+            System.out.println(isDescending);
+        } else {
+            System.out.println("false");
+        }
+    }
+}

@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+
+        int input = sc.nextInt();
+        boolean weekend = sc.nextBoolean();
+        boolean party = false;
+
+        if (weekend == false){
+            if (input >= 10 && input <= 20){
+                party = true;
+            }else{
+                party = false;
+            }
+
+        }else{
+            if (input >= 15 && input <= 25){
+                party = true;
+            }else{
+                party = false;
+            }
+        }
+        System.out.println(party);
+    }
+}

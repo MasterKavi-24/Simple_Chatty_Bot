@@ -1,0 +1,36 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        // write your code here
+        Scanner scanner = new Scanner(System.in);
+
+        long busHeight = scanner.nextLong();
+        int bridges = scanner.nextInt();
+        long[] bridgeHeight = new long[bridges];
+        boolean crash = false;
+
+        for (int f = 1; f < bridgeHeight.length; f++) {
+
+            bridgeHeight[f] = scanner.nextLong();
+
+            if (bridgeHeight[f] <= busHeight) {
+
+                crash = true;
+
+                System.out.println("Will crash on bridge " + f);
+                break;
+            } else if (bridgeHeight[f] > busHeight && crash) {
+
+                crash = false;
+            }
+
+        }
+
+        if (!crash) {
+
+            System.out.println("Will not crash");
+        }
+
+    }
+}

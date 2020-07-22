@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+
+        // starting here
+        Scanner scanner = new Scanner(System.in);
+
+        // input the number we are working with
+        int num = scanner.nextInt();
+
+        // break number in to pieces
+        int digit1 = num / 1000;
+        int digit2 = (num - digit1 * 1000) / 100;
+        int digit3 = (num - (digit1 * 1000 + digit2 * 100)) / 10;
+        int digit4 = num - (digit1 * 1000 + digit2 * 100 + digit3 * 10);
+
+        // figure out if we are symmetrical
+        if (digit1 == digit4) {
+            if (digit2 == digit3) {
+                System.out.println("1");
+            } else {
+                System.out.println(num);
+            }
+
+        } else {
+            System.out.println(num);
+        }
+
+    }
+}

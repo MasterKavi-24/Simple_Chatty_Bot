@@ -1,0 +1,24 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        boolean flag = true, flag2 = true, stop = false, stop2 =  false;
+        int number2, number = in.nextInt();
+        while(in.hasNextInt()) {
+            number2 = in.nextInt();
+            if(number2==0){
+                break;
+            }
+            if (!(number>=number2) && !stop) {
+                flag = false;
+                stop = true;
+            }
+            if (!(number<=number2) && !stop2) {
+                flag2 = false;
+                stop2 = true;
+            }
+            number = number2;
+        }
+        System.out.println(flag|| flag2);
+    }
+}

@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int length = scanner.nextInt();
+        int width = scanner.nextInt();
+        int segments = scanner.nextInt();
+
+        for (int i = 1; i <= length; i++) {
+            if (i * width == segments) {
+                System.out.println("YES");
+                return;
+            }
+        }
+
+        for (int i = 1; i <= width; i++) {
+            if (i * length == segments) {
+                System.out.println("YES");
+                return;
+            }
+        }
+
+        System.out.println("NO");
+    }
+}

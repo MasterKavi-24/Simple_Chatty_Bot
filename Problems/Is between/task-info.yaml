@@ -1,0 +1,23 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    import java.util.Scanner;
+
+    class Main {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            // put your code here
+        }
+    }
+  learner_created: false
+- name: src/Copy 1
+  visible: true
+  learner_created: true
+- name: src/Copy 2
+  visible: true
+  learner_created: true
+feedback_link: https://hyperskill.org/learn/step/2273
+status: Solved
+record: -1

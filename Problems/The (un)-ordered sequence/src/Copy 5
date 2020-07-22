@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+
+        while (a == b) {
+            b = scanner.nextInt();
+        }
+        boolean asc = a < b;
+        boolean order = true;
+        while (b != 0) {
+            if (asc && (b < a) || !asc && (a < b)) {
+                order = false;
+                break;
+            }
+            a = b;
+            b = scanner.nextInt();
+        }
+        System.out.println(order);
+    }
+}
